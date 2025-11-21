@@ -25,6 +25,9 @@ jobs:
           export PYTHONPATH=$PYTHONPATH:.
           python -m unittest discover 
           gunicorn service:app
+      - name: Run Flask app
+        run: python -m service
+    
       - name: Run app
         run: python -m serivce.routes    
       - name: Lint with flake8
