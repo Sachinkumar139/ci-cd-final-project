@@ -22,14 +22,9 @@ jobs:
           python ./service/routes.py
       - name: Run Tests (or your execution command)
         run: |
-          # The fix is to add the current directory to the PYTHONPATH
           export PYTHONPATH=$PYTHONPATH:.
-          
-          #Replace 'python ./service/routes.py' with your actual command
-          # Example: Running a test suite or entry point
           python -m unittest discover 
-          # OR if you are running gunicorn:
-          # gunicorn service:app    
+          gunicorn service:app
       - name: Run app
         run: python -m serivce.routes    
       - name: Lint with flake8
