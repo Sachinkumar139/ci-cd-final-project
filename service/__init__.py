@@ -2,6 +2,8 @@
 Service Package
 """
 from flask import Flask
+from service import routes
+
 
 app = Flask(__name__)
 
