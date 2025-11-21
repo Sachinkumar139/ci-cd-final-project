@@ -2,8 +2,6 @@
 Service Package
 """
 from flask import Flask
-from service.app import app
-
 
 app = Flask(__name__)
 
