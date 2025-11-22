@@ -11,7 +11,7 @@ COUNTER = {}
 ############################################################
 # Health Endpoint
 ############################################################
-@app.route("/health", endpoint = "health_check")
+@app.route("/health", endpoint="health_check")
 def health():
     """Health Status"""
     return jsonify(dict(status="OK")), status.HTTP_200_OK
